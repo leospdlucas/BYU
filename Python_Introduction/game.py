@@ -9,11 +9,11 @@ import math
 print("Welcome to the world of Pokemom Trainers! \n")
 print("This is a text-based adventure game where you, as an pokemon trainer, encounter wild pokemons, rivals and need to make choices to determine if you will be a failed ou successful trainer. \n")
 
-p_name = input("What is your name? \n \n").split()
+p_name = input("What is your name?\n")
 
 print("You were totally into a game of League of Legends in your room, just about to crush your archenemy, Gary, when your mom barges in and yanks the plug from your computer, causing you to lose the match. Beyond furious, you demand to know why she did it. She's fed up and tells you straight: it's time to get a job; you're 19 already, after all. So, with all your know-how and experience. \n")
 
-job = input("what career path are you thinking of? (MARKETING / ADMINISTRATION / TECHNOLOGY / SCIENCE / POKEMOM TRAINER)\n \n").lower().strip()
+job = input("what career path are you thinking of? (MARKETING / ADMINISTRATION / TECHNOLOGY / SCIENCE / POKEMOM TRAINER)\n \n").lower()
 charmander = ["CHARMANDER", "CHARMILION", "CHARIZARD"]
 squirtle = ["SQUIRTLE", "WARTOTTLE", "BLASTOISE"]
 bulbassauro = ["BULBASSAURO", "IVYSSAURO", "VENUSSAURO"]
@@ -29,7 +29,7 @@ else:
     
 def start():
     level = int(5)
-    choice = input(f"Which Pokemom do you choose? ({charmander[0]} / {squirtle[0]} / {bulbassauro[0]})\n").lower().strip()
+    choice = input(f"Which Pokemom do you choose? ({charmander[0]} / {squirtle[0]} / {bulbassauro[0]})\n").lower()
 
     if choice == "charmander":
         print(f"Congratulations {p_name}! Your {charmander[0]} Lv: {str(level)} is full of life and ready to battle.")
