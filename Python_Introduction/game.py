@@ -32,19 +32,19 @@ def start():
     choice = input(f"Which Pokemom do you choose? ({charmander[0]} / {squirtle[0]} / {bulbassauro[0]})\n").lower().strip()
 
     if choice == "charmander":
-        print(f"Congratulations {p_name}! Your {charmander[0].upper} Lv: {level} is full of life and ready to battle.")
+        print(f"Congratulations {p_name}! Your {charmander[0].upper} Lv: {str(level)} is full of life and ready to battle.")
         party = [charmander[0], level]
-        print(f"The {party[0].upper} Lv: {level} were added to your party.")
+        print(f"The {party[0].upper} Lv: {str(level)} were added to your party.")
         scenario2_charmander() # Continue to the next scenario
     elif choice == "squirtle":
-        print(f"Congratulations {p_name}! Your {squirtle[0].upper} Lv: {level} is full of life and ready to battle.")
+        print(f"Congratulations {p_name}! Your {squirtle[0].upper} Lv: {str(level)} is full of life and ready to battle.")
         party = [squirtle[0], level]
         print(f"The {party[0].upper} Lv: {level} were added to your party.")
         scenario2_squirtle() # Continue to the next scenario
     elif choice == "bulbassauro":
-        print(f"Congratulations {p_name}! Your {bulbassauro[0].upper} Lv: {level} is full of life and ready to battle.")
+        print(f"Congratulations {p_name}! Your {bulbassauro[0].upper} Lv: {str(level)} is full of life and ready to battle.")
         party = [bulbassauro[0], level]
-        print(f"The {party[0].upper} Lv: {level} were added to your party.")        
+        print(f"The {party[0].upper} Lv: {str(level)} were added to your party.")        
         scenario2_bulbassauro() # Continue to the next scenario
     else:
         print("Are you kidding me? You must choice between CHARMANDER / SQUIRTLE / BULBASSAURO")
@@ -56,7 +56,7 @@ def first_battle(party):
     print(f"You and Gary are now in the same room, and you both decide to fight.")
     print(f"BATTLE NOTES:\n 1. The battles are decided in a best of 3 matches of Rock, Paper, Scissors; \n 2. Win 2 matches to be the winner of the battle; \n 3. At the beginning of the battle, the name of the Pokémon and its level will be displayed. When you win the battle, your Pokémon receives 10% of the opponent's level as an addition to its own level. \n 4. If it's a wild Pokémon, you'll have the option to capture it. \n 5. When you lose, the match restarts. \n \n")
 
-    print(f"You: {party[0].upper} Lv: {party[1]}")
+    print(f"You: {party[0].upper} Lv: {str(party[1])}")
     
 # Stone, Pepper and scissor
 def user_choice():
@@ -103,11 +103,12 @@ def scenario2_charmander(party):
     party_rival = list[squirtle[0], 5]
 
     first_battle()
-    print(f"Gary: {party_rival[0].upper} Lv: {party_rival[1]} \n")
+    print(f"Gary: {party_rival[0].upper} Lv: {str(party_rival[1])} \n")
     battle() # Start the game
+
     if battle.winner ==  "You win!":
         math.ceil(party[1] * 1.1)
-        print(f"Your {party[0].upper} leveled up to Lv: {party[1]} \n")
+        print(f"Your {party[0].upper} leveled up to Lv: {str(party[1])} \n")
 
     scenario3_charmander()
 
@@ -118,11 +119,12 @@ def scenario2_squirtle(party):
     party_rival = list[bulbassauro[0], 5]
 
     first_battle()
-    print(f"Gary: {party_rival[0].upper} Lv: {party_rival[1]} \n")
+    print(f"Gary: {party_rival[0].upper} Lv: {str(party_rival[1])} \n")
     battle() # Start the game
+
     if battle.winner ==  "You win!":
         math.ceil(party[1] * 1.1)
-        print(f"Your {party[0].upper} leveled up to Lv: {party[1]} \n")
+        print(f"Your {party[0].upper} leveled up to Lv: {str(party[1])} \n")
 
     scenario3_squirtle()
 
@@ -133,11 +135,12 @@ def scenario2_bulbassauro(party):
     party_rival = list[charmander[0], 5]
 
     first_battle()
-    print(f"Gary: {party_rival[0].upper} Lv: {party_rival[1]} \n")
+    print(f"Gary: {party_rival[0].upper} Lv: {str(party_rival[1])} \n")
     battle() # Start the game
+
     if battle.winner ==  "You win!":
         math.ceil(party[1] * 1.1)
-        print(f"Your {party[0].upper} leveled up to Lv: {party[1]} \n")
+        print(f"Your {party[0].upper} leveled up to Lv: {str(party[1])} \n")
 
     scenario3_bulbassauro()
 
