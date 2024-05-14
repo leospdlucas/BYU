@@ -32,17 +32,17 @@ def start():
     choice = input(f"Which Pokemom do you choose? ({charmander[0]} / {squirtle[0]} / {bulbassauro[0]})\n").lower().strip()
 
     if choice == "charmander":
-        print(f"Congratulations {p_name}! Your {charmander[0].upper} Lv: {str(level)} is full of life and ready to battle.")
+        print(f"Congratulations {p_name}! Your {charmander[0]} Lv: {str(level)} is full of life and ready to battle.")
         party = [charmander[0], level]
         print(f"The {party[0].upper} Lv: {str(level)} were added to your party.")
         scenario2_charmander() # Continue to the next scenario
     elif choice == "squirtle":
-        print(f"Congratulations {p_name}! Your {squirtle[0].upper} Lv: {str(level)} is full of life and ready to battle.")
+        print(f"Congratulations {p_name}! Your {squirtle[0]} Lv: {str(level)} is full of life and ready to battle.")
         party = [squirtle[0], level]
         print(f"The {party[0].upper} Lv: {level} were added to your party.")
         scenario2_squirtle() # Continue to the next scenario
     elif choice == "bulbassauro":
-        print(f"Congratulations {p_name}! Your {bulbassauro[0].upper} Lv: {str(level)} is full of life and ready to battle.")
+        print(f"Congratulations {p_name}! Your {bulbassauro[0]} Lv: {str(level)} is full of life and ready to battle.")
         party = [bulbassauro[0], level]
         print(f"The {party[0].upper} Lv: {str(level)} were added to your party.")        
         scenario2_bulbassauro() # Continue to the next scenario
