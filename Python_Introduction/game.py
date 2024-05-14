@@ -29,7 +29,7 @@ else:
     
 def start():
     level = int(5)
-    choice = input("Which Pokemom do you choose? ({charmander[0]} / {squirtle[0]} / {bulbassauro[0]})\n").lower().strip()
+    choice = input(f"Which Pokemom do you choose? ({charmander[0]} / {squirtle[0]} / {bulbassauro[0]})\n").lower().strip()
 
     if choice == "charmander":
         print(f"Congratulations {p_name}! Your {charmander[0].upper} Lv: {level} is full of life and ready to battle.")
@@ -52,7 +52,7 @@ def start():
 
 start()
 
-def first_battle(party, party_rival):
+def first_battle(party):
     print(f"You and Gary are now in the same room, and you both decide to fight.")
     print(f"BATTLE NOTES:\n 1. The battles are decided in a best of 3 matches of Rock, Paper, Scissors; \n 2. Win 2 matches to be the winner of the battle; \n 3. At the beginning of the battle, the name of the Pokémon and its level will be displayed. When you win the battle, your Pokémon receives 10% of the opponent's level as an addition to its own level. \n 4. If it's a wild Pokémon, you'll have the option to capture it. \n 5. When you lose, the match restarts. \n \n")
 
