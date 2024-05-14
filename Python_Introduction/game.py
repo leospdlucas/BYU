@@ -9,14 +9,14 @@ import math
 print("Welcome to the world of Pokemom Trainers! \n")
 print("This is a text-based adventure game where you, as an pokemon trainer, encounter wild pokemons, rivals and need to make choices to determine if you will be a failed ou successful trainer. \n")
 
-p_name = input("What is your name? \n")
+p_name = input("What is your name? \n \n").split()
 
 print("You were totally into a game of League of Legends in your room, just about to crush your archenemy, Gary, when your mom barges in and yanks the plug from your computer, causing you to lose the match. Beyond furious, you demand to know why she did it. She's fed up and tells you straight: it's time to get a job; you're 19 already, after all. So, with all your know-how and experience. \n")
 
-job = input("what career path are you thinking of? (MARKETING / ADMINISTRATION / TECHNOLOGY / SCIENCE / POKEMOM TRAINER)\n").lower().strip()
+job = input("what career path are you thinking of? (MARKETING / ADMINISTRATION / TECHNOLOGY / SCIENCE / POKEMOM TRAINER)\n \n").lower().strip()
 charmander = ["CHARMANDER", "CHARMILION", "CHARIZARD"]
-squirtle = 'SQUIRTLE'
-bulbassauro = 'BULBASSAURO'
+squirtle = ["SQUIRTLE", "WARTOTTLE", "BLASTOISE"]
+bulbassauro = ["BULBASSAURO", "IVYSSAURO", "VENUSSAURO"]
 
 if job != "pokemom trainer":
     print("HAHAHA! You don't even have a high school diploma, you've just been playing League of Legends your whole life and you want to pursue a career!?. You have no choice, you only could be a POKEMOM TRAINER. \n")
@@ -25,7 +25,7 @@ if job != "pokemom trainer":
 else:
     print("OK! Go to Prof. Oak's house to select your first pokemom.")
     job = 'pokemom trainer'
-    print("You meet the Prof. Oak and then he shows you 3 Pokemoms to you choose your first poke: ({charmander[0]} / {squirtle[0]} / {bulbassauro[0]}) \n")
+    print(f"You meet the Prof. Oak and then he shows you 3 Pokemoms to you choose your first poke: ({charmander[0]} / {squirtle[0]} / {bulbassauro[0]}) \n")
     
 def start():
     level = int(5)
