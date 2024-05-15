@@ -7,35 +7,46 @@ import random
 # Implementation of tips for getting thee number right
 # Implementation of scores
 # Adding my criativity here
-print("What is the magic number between 1 and 100. \n Try to guess it in as few attempts as possible. \n The fewer the number of attempts, the higher the score. \n")
+def main():
+    print("Welcome to the Guess My Number game! \n")
+    print("What is the magic number between 1 and 100. \n Try to guess it in as few attempts as possible. \n The fewer the number of attempts, the higher the score. \n")
 
-number = random.randint(1, 100)
-guess = int(input("Take a guess: "))
-attempts = 0 # Adding my criativity here
-point = 100 # Adding my criativity here
+    repeat = "y"
 
-while guess != number:
-    if abs(guess - number) <= 10 and abs(guess - number) > 5: # Adding my criativity here
-        if guess < number:
-            print("Your guess is LOW! Take a bit higher guess \n") # Adding my criativity here
-        else:
-            print("Your guess is HIGH! Take a bit lower guess \n") # Adding my criativity here
+    while repeat == "y":
+        number = random.randint(1, 100)
+        guess = int(input("Take a guess: "))
+        attempts = 1 
+        point = 105 # Adding my criativity here
 
-    elif abs(guess - number) <=5: # Adding my criativity here
-        if guess < number:
-            print("Almost there! You're close to getting it right... Little HIGH \n") # Adding my criativity here
-        else:
-            print("Almost there! You're close to getting it right... Little LOW \n") # Adding my criativity here
+        while guess != number:
+            if abs(guess - number) <= 10 and abs(guess - number) > 5: # Adding my criativity here
+                if guess < number:
+                    print("Your guess is LOW! Take a bit higher guess \n") # Adding my criativity here
+                else:
+                    print("Your guess is HIGH! Take a bit lower guess \n") # Adding my criativity here
 
-    elif guess < number:
-        print("Your guess is too LOW! Take a higher guess \n")
+            elif abs(guess - number) <=5: # Adding my criativity here
+                if guess < number:
+                    print("Almost there! You're close to getting it right... Little HIGH \n") # Adding my criativity here
+                else:
+                    print("Almost there! You're close to getting it right... Little LOW \n") # Adding my criativity here
+
+            elif guess < number:
+                print("Your guess is too LOW! Take a higher guess \n")
+            
+            else:
+                print("Your guess is too HIGH! Take a lower guess \n")
+            
+            guess = int(input("\nTake a guess: "))
+            attempts += 1
+
+        point -= attempts * 5 # Adding my criativity here
+
+        print(f"Good job! You guessed my number in {str(attempts)} guesses! \n Your score is: {str(point)} \n") # Adding my criativity here
+
+        repeat = input(f"Do you want to play again? (y/n): \n").lower() 
     
-    else:
-        print("Your guess is too HIGH! Take a lower guess \n")
-    
-    guess = int(input("Take a guess: "))
-    attempts += 1
+    print("\nThank you for playing the Guess My Number game! \n") 
 
-point -= attempts * 5 # Adding my criativity here
-
-print(f"Good job! You guessed my number in {str(attempts)} guesses! \n Your score is: {point} \n") # Adding my criativity here
+main()
