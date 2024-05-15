@@ -43,8 +43,10 @@ def main():
 
         point -= attempts * 5 # Adding my criativity here
 
+        # Strech Challenge 1
         print(f"Good job! You guessed my number in {str(attempts)} guesses! \n Your score is: {str(point)} \n") # Adding my criativity here
 
+        # Strech Challenge 2
         repeat = input(f"Do you want to play again? (y/n): \n").lower() 
     
     print("\nThank you for playing the Guess My Number game! \n") 
