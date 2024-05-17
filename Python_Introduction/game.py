@@ -5,6 +5,8 @@
 import random
 import math
 
+# ADDITIONAL CREATIVITY: Implementating a Stone, Paper, and Scissors as battle methods
+# Implementing functions logic
 # Scenario 1
 print("Welcome to the world of Pokemom Trainers!\n")
 print("This is a text-based adventure game where you, as a Pokemon trainer, encounter wild Pokemon, rivals, and need to make choices to determine if you will be a failed or successful trainer.\n")
