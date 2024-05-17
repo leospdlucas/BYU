@@ -11,9 +11,9 @@ def main():
     print("Welcome to the Guess My Number game! \n")
     print("What is the magic number between 1 and 100. \n Try to guess it in as few attempts as possible. \n The fewer the number of attempts, the higher the score. \n")
 
-    repeat = "y"
+    repeat = True
 
-    while repeat == "y":
+    while repeat:
         number = random.randint(1, 100)
         guess = int(input("Take a guess: "))
         attempts = 1 
@@ -46,8 +46,8 @@ def main():
         # Strech Challenge 1
         print(f"Good job! You guessed my number in {str(attempts)} guesses! \n Your score is: {str(point)} \n") # Adding my criativity here
 
-        # Strech Challenge 2
-        repeat = input(f"Do you want to play again? (y/n): \n").lower() 
+        # Strech Challenge 2 boolean
+        repeat = input(f"Do you want to play again? (y/n): \n").lower() == "y"
     
     print("\nThank you for playing the Guess My Number game! \n") 
 
