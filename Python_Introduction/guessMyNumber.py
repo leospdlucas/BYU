@@ -4,6 +4,8 @@
 """
 
 import random
+
+# ADDITIONAL CREATIVITY:
 # Implementation of tips for getting thee number right
 # Implementation of scores
 # Adding my criativity here
