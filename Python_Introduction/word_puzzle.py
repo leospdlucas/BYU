@@ -11,9 +11,10 @@
 # Implementing score
 import random
 import nltk
-from nltk.corpus import words
+from nltk.corpus import words 
 
 # Ensure the NLTK words corpus is downloaded
+# Additional Criativity
 print("\nInstalling libraries...\n")
 nltk.download('words')
 print("\nInstallation complete!\n")
@@ -32,7 +33,7 @@ def tips(hidden_word, guess, now_tip):
 def game():
     again = True
 
-    while again:
+    while again: # Additional Criativity
         word_list = words.words()  # List of English words from nltk.corpus
         hidden_word = random.choice(word_list).lower()  # Random word from the list
         score = 110
@@ -62,10 +63,10 @@ def game():
             
             tip = tips(hidden_word, guess, tip)  
 
-        score -= attempts * 10
+        score -= attempts * 10 # Additional Criativity
         print(f"\nYour score is {score} \n")
-        again = input("\nDo you want to play again? (y/n): \n").lower() == "y"
+        again = input("\nDo you want to play again? (y/n): \n").lower() == "y" # Additional Criativity
 
-    print("\nThank you for playing the Guess My Number game! \n") 
+    print("\nThank you for playing the WORD GUESSING GAME! \n") 
 
 game()
