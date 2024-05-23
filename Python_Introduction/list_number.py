@@ -27,7 +27,7 @@ def largest(numbers):
 def smallest(numbers):
     smallest = numbers[0]
     for number in numbers:
-        if number < smallest:
+        if number < smallest and number >= 0:
             smallest = number
     return smallest
 
