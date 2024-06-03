@@ -1,29 +1,48 @@
-# Step 1: Load the dataset
-file_path = 'life-expectancy.csv'
+"""
+    Author: Leonardo Lucas
+    Date: 2024-06-03
+    Description: Find the overall maximum and minimum life expectancies in the dataset.
+"""
 
-# Variables to store the maximum and minimum life expectancies
-max_life_expectancy = float('-inf')
-min_life_expectancy = float('inf')
+# Criativity Content
+# Implemented average life expectancies
+# Function to load the dataset
+def load(file_path):
+    dataset = []
+    with open(file_path, 'r') as file: # 'r' read mode
+        lines = file.readlines() # Reads all lines of the file and stores them in a list named lines.
+        for line in lines[1:]:  # Skip the header row
+            row = line.strip().split(',')
+            dataset.append(row)
+    return dataset
 
-with open(file_path, 'r') as file:
-    # Step 2: Read the file line by line
-    header = file.readline()  # Skip the header line
-    for line in file:
-        # Step 3: Split each line into parts
-        parts = line.strip().split(',')
-        
-        # Extract the relevant information
-        country = parts[0]
-        year = int(parts[1])
-        life_expectancy = float(parts[3])
-        
-        # Step 4: Find the minimum and maximum life expectancies
-        if life_expectancy > max_life_expectancy:
-            max_life_expectancy = life_expectancy
+# Function to find the average, lowest and highest life expectancies
+def find_min_max_avg_life_expectancy(dataset):
+    min_life_expectancy = float('inf')
+    max_life_expectancy = float('-inf')
+    total_life_expectancy = 0
+    num_countries = len(dataset)
+
+    for row in dataset:
+        life_expectancy = float(row[2])  # Assuming life expectancy is in the third column
+        total_life_expectancy += life_expectancy
         
         if life_expectancy < min_life_expectancy:
             min_life_expectancy = life_expectancy
+        if life_expectancy > max_life_expectancy:
+            max_life_expectancy = life_expectancy
+    
+    avg_life_expectancy = total_life_expectancy / num_countries
 
-# Step 5: Display the results
-print(f'The overall max life expectancy is: {max_life_expectancy}')
-print(f'The overall min life expectancy is: {min_life_expectancy}')
+    return min_life_expectancy, max_life_expectancy, avg_life_expectancy
+
+# Main program
+def main():
+    file_path = 'life-expectancy.csv'
+    dataset = load(file_path)
+    min_life_expectancy, max_life_expectancy, avg_life_expectancy = find_min_max_avg_life_expectancy(dataset)
+    print(f"Lowest life expectancy: {min_life_expectancy: .2f}")
+    print(f"Highest life expectancy: {max_life_expectancy: .2f}")
+    print(f"Average life expectancy: {avg_life_expectancy: .2f}")
+
+main()
