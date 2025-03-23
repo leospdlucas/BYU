@@ -8,10 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     gridButton.addEventListener("click", () => {
         display.classList.add("grid");
         display.classList.remove("list");
+
+        gridButton.classList.add("active");
+        listButton.classList.remove("active");
     });
 
     listButton.addEventListener("click", () => {
         display.classList.add("list");
         display.classList.remove("grid");
+
+        gridButton.classList.add("active");
+        listButton.classList.remove("active");
     });
 });
